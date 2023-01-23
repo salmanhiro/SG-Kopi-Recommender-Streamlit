@@ -1,0 +1,5 @@
+streamlit
+bokeh
+pandas
+numpy
+streamlit-bokeh-events
