@@ -1,2 +1,2 @@
 # SG-Kopi-Recommender-Streamlit
-Streamlit service for coffee recommender, currently available in Singapore and Jakarta
+Streamlit service for coffee recommender, currently available in Singapore
