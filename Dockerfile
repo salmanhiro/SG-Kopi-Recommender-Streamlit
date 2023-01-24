@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.8
 
 RUN apt-get update -y
 RUN apt install libgl1-mesa-glx wget libglib2.0-0 -y
