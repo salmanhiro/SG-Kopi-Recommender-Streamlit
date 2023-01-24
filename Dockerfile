@@ -13,5 +13,8 @@ COPY index.html /usr/local/lib/python3.9/site-packages/streamlit/static/index.ht
 # Set the working directory to the app directory
 WORKDIR /src
 
+EXPOSE 8501
+
 # Run the app
-CMD streamlit run app.py
+ENTRYPOINT [ "streamlit", "run" ]
+CMD [ "app.py", "--server.headless", "true", "--server.fileWatcherType", "none", "--browser.gatherUsageStats", "false"]
