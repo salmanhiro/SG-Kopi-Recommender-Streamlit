@@ -1,14 +1,15 @@
-FROM nikolaik/python-nodejs:python3.9-nodejs18
+FROM python:3.8-slim-buster
+
+RUN apt-get update -y
+RUN apt install libgl1-mesa-glx wget libglib2.0-0 -y
 
 # Install Streamlit and other dependencies
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 # Add the app files to the image
-ADD /src /src
-ADD index.html index.html
+ADD . . 
 
-# ADD index.html /usr/local/lib/python3.9/site-packages/streamlit/static/index.html
-COPY index.html /usr/local/lib/python3.9/site-packages/streamlit/static/index.html
+COPY index.html /usr/local/lib/python3.8/site-packages/streamlit/static/index.html
 
 # Set the working directory to the app directory
 WORKDIR /src
