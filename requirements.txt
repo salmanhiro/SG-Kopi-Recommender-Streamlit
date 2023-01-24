@@ -1,5 +1,8 @@
 streamlit
 bokeh
-pandas
+dask
 numpy
-streamlit-bokeh-events
+streamlit_js_eval
+numba
+pandas  
+plotly
